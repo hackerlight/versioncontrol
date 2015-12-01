@@ -14,7 +14,7 @@ double cost(int rate[] , int clothes[] ,int n, char gender ,int age)
 
   
 
-	if(gender=='F' )
+	if(gender=='F' || gender=='f')
 	{
 
 		if(age>50)
