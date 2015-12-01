@@ -12,9 +12,9 @@ double cost(int rate[] , int clothes[] ,int n, char gender ,int age)
 			total_cost+=(rate[i]*clothes[i]);
 		}
 
+  
 
-
-	if(gender=='F' || gender=='f')
+	if(gender=='F')
 	{
 
 		if(age>50)
@@ -44,7 +44,8 @@ double cost(int rate[] , int clothes[] ,int n, char gender ,int age)
 	}
 
 	discount = ((discount_rate*total_cost)/100);
-	total_cost-=discount;
-
-	return total_cost;
+ 	total_cost-=discount;
+ 
+       cout<<"The total cost is --> "<<totalcost<<endl;
+       	return total_cost;
 }
