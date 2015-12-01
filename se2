@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+double cost(int rate[] , int clothes[] ,int n, char gender ,int age)
+{
+
+	double total_cost=0, discount=0;
+	int discount_rate=0;
+
+	for(int i=0;i<n;i++)
+		{
+			total_cost+=(rate[i]*clothes[i]);
+		}
+
+
+
+	if(gender=='F' || gender=='f')
+	{
+
+		if(age>50)
+		{
+			discount_rate = 20;
+		}
+		else if(age < 15)
+		{
+			discount_rate = 15;
+		}
+		else discount_rate = 7;
+	}
+
+
+	else
+	{
+
+		if(age>50)
+		{
+			discount_rate = 25;
+		}
+		else if(age < 15)
+		{
+			discount_rate = 10;
+		}
+		else discount_rate = 5;
+	}
+
+	discount = ((discount_rate*total_cost)/100);
+	total_cost-=discount;
+
+	return total_cost;
+}
