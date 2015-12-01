@@ -43,7 +43,7 @@ double cost(int rate[] , int clothes[] ,int n, char gender ,int age)
 		else discount_rate = 5;
 	}
 
-	discount = ((discount_rate*total_cost)/100);
+	discount = abs(((discount_rate*total_cost)/100));
  	total_cost-=discount;
  
        //cout<<"The total cost is --> "<<totalcost<<endl;
